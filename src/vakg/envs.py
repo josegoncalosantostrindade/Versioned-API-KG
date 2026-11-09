@@ -68,6 +68,9 @@ def build_one(spec: dict, python: str, max_depth: int, force: bool) -> dict:
             return {"library": lib, "requested": version, "status": "venv-failed", "error": res.stderr[-300:]}
     extras = [e for e in (spec.get("extra") or "").split() if e]
     res = _install(env, python, [f"{lib}=={version}", *extras])
+    if res.returncode and extras:
+        # the extra pins (only needed to run tests) may lack a wheel; the library itself may not
+        res = _install(env, python, [f"{lib}=={version}"])
     substituted = False
     if res.returncode:
         # No wheel for the exact version: fall back to the newest patch of the same minor.
