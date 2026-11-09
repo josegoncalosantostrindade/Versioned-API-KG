@@ -1,0 +1,25 @@
+[project]
+name = "versioned-api-kg"
+version = "0.1.0"
+description = "Versioned API knowledge graph for detecting and repairing hallucinated library calls in LLM-generated code"
+requires-python = ">=3.10"
+dependencies = ["rdflib>=7.0", "packaging>=23.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+vakg-build-snapshots = "vakg.envs:main"
+vakg-build-kg = "vakg.kg:main"
+vakg-check = "vakg.checker:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
