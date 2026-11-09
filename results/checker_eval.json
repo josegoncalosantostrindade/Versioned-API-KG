@@ -1,0 +1,3906 @@
+{
+ "summary": {
+  "flask": {
+   "problems": 22,
+   "false_positive_problems": 0,
+   "warning_problems": 7,
+   "cross_version_checks": 44,
+   "cross_version_flagged": 20
+  },
+  "networkx": {
+   "problems": 9,
+   "false_positive_problems": 0,
+   "warning_problems": 0,
+   "cross_version_checks": 36,
+   "cross_version_flagged": 8
+  },
+  "numpy": {
+   "problems": 15,
+   "false_positive_problems": 0,
+   "warning_problems": 0,
+   "cross_version_checks": 15,
+   "cross_version_flagged": 0
+  },
+  "pandas": {
+   "problems": 10,
+   "false_positive_problems": 0,
+   "warning_problems": 0,
+   "cross_version_checks": 30,
+   "cross_version_flagged": 1
+  },
+  "scikit-learn": {
+   "problems": 12,
+   "false_positive_problems": 0,
+   "warning_problems": 0,
+   "cross_version_checks": 24,
+   "cross_version_flagged": 0
+  },
+  "scipy": {
+   "problems": 40,
+   "false_positive_problems": 0,
+   "warning_problems": 0,
+   "cross_version_checks": 240,
+   "cross_version_flagged": 49
+  },
+  "sympy": {
+   "problems": 33,
+   "false_positive_problems": 0,
+   "warning_problems": 3,
+   "cross_version_checks": 132,
+   "cross_version_flagged": 13
+  }
+ },
+ "records": [
+  {
+   "example_id": "143",
+   "library": "flask",
+   "version": "2.0.0",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.0.1": [],
+    "3.0.0": [
+     {
+      "line": 21,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_encoder",
+      "message": "`flask.Flask.json_encoder` does not exist in flask 3.0.0. It exists in versions: 2.0.0, 2.0.1.",
+      "exists_in": [
+       "2.0.0",
+       "2.0.1"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "144",
+   "library": "flask",
+   "version": "3.0.0",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [
+    {
+     "line": 21,
+     "kind": "missing_member",
+     "symbol": "flask.Flask.json",
+     "message": "`flask.Flask.json` was not found in flask 3.0.0 (nor in any other known version).",
+     "exists_in": [],
+     "suggestions": [],
+     "severity": "warning"
+    }
+   ],
+   "other_versions": {
+    "2.0.0": [
+     {
+      "line": 15,
+      "kind": "missing_member",
+      "symbol": "flask.json.provider",
+      "message": "`flask.json.provider` does not exist in flask 2.0.0. It exists in versions: 3.0.0.",
+      "exists_in": [
+       "3.0.0"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     },
+     {
+      "line": 20,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     },
+     {
+      "line": 21,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json",
+      "message": "`flask.Flask.json` was not found in flask 2.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     },
+     {
+      "line": 21,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     }
+    ],
+    "2.0.1": [
+     {
+      "line": 15,
+      "kind": "missing_member",
+      "symbol": "flask.json.provider",
+      "message": "`flask.json.provider` does not exist in flask 2.0.1. It exists in versions: 3.0.0.",
+      "exists_in": [
+       "3.0.0"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     },
+     {
+      "line": 20,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.1 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     },
+     {
+      "line": 21,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json",
+      "message": "`flask.Flask.json` was not found in flask 2.0.1 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     },
+     {
+      "line": 21,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.1 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "145",
+   "library": "flask",
+   "version": "2.0.0",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.0.1": [],
+    "3.0.0": [
+     {
+      "line": 16,
+      "kind": "missing_param",
+      "symbol": "flask.send_file(attachment_filename=)",
+      "message": "`flask.send_file` has no parameter `attachment_filename` in flask 3.0.0. It exists in versions: 2.0.0, 2.0.1.",
+      "exists_in": [
+       "2.0.0",
+       "2.0.1"
+      ],
+      "suggestions": [
+       "as_attachment"
+      ],
+      "severity": "error"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "146",
+   "library": "flask",
+   "version": "3.0.0",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.0.0": [],
+    "2.0.1": []
+   }
+  },
+  {
+   "example_id": "147",
+   "library": "flask",
+   "version": "2.0.1",
+   "type_of_change": "name change",
+   "own_version_issues": [
+    {
+     "line": 14,
+     "kind": "missing_member",
+     "symbol": "flask.Flask.config",
+     "message": "`flask.Flask.config` was not found in flask 2.0.1 (nor in any other known version).",
+     "exists_in": [],
+     "suggestions": [
+      "make_config",
+      "config_class",
+      "default_config"
+     ],
+     "severity": "warning"
+    }
+   ],
+   "other_versions": {
+    "2.0.0": [
+     {
+      "line": 14,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.config",
+      "message": "`flask.Flask.config` was not found in flask 2.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "make_config",
+       "config_class",
+       "default_config"
+      ],
+      "severity": "warning"
+     }
+    ],
+    "3.0.0": [
+     {
+      "line": 14,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.config",
+      "message": "`flask.Flask.config` was not found in flask 3.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "default_config"
+      ],
+      "severity": "warning"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "148",
+   "library": "flask",
+   "version": "3.0.0",
+   "type_of_change": "name change",
+   "own_version_issues": [
+    {
+     "line": 14,
+     "kind": "missing_member",
+     "symbol": "flask.Flask.config",
+     "message": "`flask.Flask.config` was not found in flask 3.0.0 (nor in any other known version).",
+     "exists_in": [],
+     "suggestions": [
+      "default_config"
+     ],
+     "severity": "warning"
+    }
+   ],
+   "other_versions": {
+    "2.0.0": [
+     {
+      "line": 14,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.config",
+      "message": "`flask.Flask.config` was not found in flask 2.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "make_config",
+       "config_class",
+       "default_config"
+      ],
+      "severity": "warning"
+     }
+    ],
+    "2.0.1": [
+     {
+      "line": 14,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.config",
+      "message": "`flask.Flask.config` was not found in flask 2.0.1 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "make_config",
+       "config_class",
+       "default_config"
+      ],
+      "severity": "warning"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "149",
+   "library": "flask",
+   "version": "2.0.1",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.0.0": [],
+    "3.0.0": [
+     {
+      "line": 10,
+      "kind": "missing_member",
+      "symbol": "flask.safe_join",
+      "message": "`flask.safe_join` does not exist in flask 3.0.0. It exists in versions: 2.0.0, 2.0.1.",
+      "exists_in": [
+       "2.0.0",
+       "2.0.1"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "150",
+   "library": "flask",
+   "version": "3.0.0",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.0.0": [],
+    "2.0.1": []
+   }
+  },
+  {
+   "example_id": "151",
+   "library": "flask",
+   "version": "2.0.1",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.0.0": [],
+    "3.0.0": [
+     {
+      "line": 6,
+      "kind": "missing_member",
+      "symbol": "flask.helpers.total_seconds",
+      "message": "`flask.helpers.total_seconds` does not exist in flask 3.0.0. It exists in versions: 2.0.0, 2.0.1.",
+      "exists_in": [
+       "2.0.0",
+       "2.0.1"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "152",
+   "library": "flask",
+   "version": "3.0.0",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.0.0": [],
+    "2.0.1": []
+   }
+  },
+  {
+   "example_id": "163",
+   "library": "flask",
+   "version": "2.0.0",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.0.1": [],
+    "3.0.0": [
+     {
+      "line": 23,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_encoder",
+      "message": "`flask.Flask.json_encoder` does not exist in flask 3.0.0. It exists in versions: 2.0.0, 2.0.1.",
+      "exists_in": [
+       "2.0.0",
+       "2.0.1"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "164",
+   "library": "flask",
+   "version": "3.0.0",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [
+    {
+     "line": 24,
+     "kind": "missing_member",
+     "symbol": "flask.Flask.json",
+     "message": "`flask.Flask.json` was not found in flask 3.0.0 (nor in any other known version).",
+     "exists_in": [],
+     "suggestions": [],
+     "severity": "warning"
+    }
+   ],
+   "other_versions": {
+    "2.0.0": [
+     {
+      "line": 15,
+      "kind": "missing_member",
+      "symbol": "flask.json.provider",
+      "message": "`flask.json.provider` does not exist in flask 2.0.0. It exists in versions: 3.0.0.",
+      "exists_in": [
+       "3.0.0"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     },
+     {
+      "line": 23,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     },
+     {
+      "line": 24,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json",
+      "message": "`flask.Flask.json` was not found in flask 2.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     },
+     {
+      "line": 24,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     }
+    ],
+    "2.0.1": [
+     {
+      "line": 15,
+      "kind": "missing_member",
+      "symbol": "flask.json.provider",
+      "message": "`flask.json.provider` does not exist in flask 2.0.1. It exists in versions: 3.0.0.",
+      "exists_in": [
+       "3.0.0"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     },
+     {
+      "line": 23,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.1 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     },
+     {
+      "line": 24,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json",
+      "message": "`flask.Flask.json` was not found in flask 2.0.1 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     },
+     {
+      "line": 24,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.1 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "165",
+   "library": "flask",
+   "version": "2.0.0",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.0.1": [],
+    "3.0.0": [
+     {
+      "line": 22,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_encoder",
+      "message": "`flask.Flask.json_encoder` does not exist in flask 3.0.0. It exists in versions: 2.0.0, 2.0.1.",
+      "exists_in": [
+       "2.0.0",
+       "2.0.1"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "166",
+   "library": "flask",
+   "version": "3.0.0",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [
+    {
+     "line": 26,
+     "kind": "missing_member",
+     "symbol": "flask.Flask.json",
+     "message": "`flask.Flask.json` was not found in flask 3.0.0 (nor in any other known version).",
+     "exists_in": [],
+     "suggestions": [],
+     "severity": "warning"
+    }
+   ],
+   "other_versions": {
+    "2.0.0": [
+     {
+      "line": 18,
+      "kind": "missing_member",
+      "symbol": "flask.json.provider",
+      "message": "`flask.json.provider` does not exist in flask 2.0.0. It exists in versions: 3.0.0.",
+      "exists_in": [
+       "3.0.0"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     },
+     {
+      "line": 25,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     },
+     {
+      "line": 26,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json",
+      "message": "`flask.Flask.json` was not found in flask 2.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     },
+     {
+      "line": 26,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     }
+    ],
+    "2.0.1": [
+     {
+      "line": 18,
+      "kind": "missing_member",
+      "symbol": "flask.json.provider",
+      "message": "`flask.json.provider` does not exist in flask 2.0.1. It exists in versions: 3.0.0.",
+      "exists_in": [
+       "3.0.0"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     },
+     {
+      "line": 25,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.1 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     },
+     {
+      "line": 26,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json",
+      "message": "`flask.Flask.json` was not found in flask 2.0.1 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     },
+     {
+      "line": 26,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.1 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "167",
+   "library": "flask",
+   "version": "2.0.0",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.0.1": [],
+    "3.0.0": [
+     {
+      "line": 15,
+      "kind": "missing_member",
+      "symbol": "flask.safe_join",
+      "message": "`flask.safe_join` does not exist in flask 3.0.0. It exists in versions: 2.0.0, 2.0.1.",
+      "exists_in": [
+       "2.0.0",
+       "2.0.1"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "168",
+   "library": "flask",
+   "version": "3.0.0",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.0.0": [],
+    "2.0.1": []
+   }
+  },
+  {
+   "example_id": "169",
+   "library": "flask",
+   "version": "3.0.0",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [
+    {
+     "line": 23,
+     "kind": "missing_member",
+     "symbol": "flask.Flask.json",
+     "message": "`flask.Flask.json` was not found in flask 3.0.0 (nor in any other known version).",
+     "exists_in": [],
+     "suggestions": [],
+     "severity": "warning"
+    }
+   ],
+   "other_versions": {
+    "2.0.0": [
+     {
+      "line": 14,
+      "kind": "missing_member",
+      "symbol": "flask.json.provider",
+      "message": "`flask.json.provider` does not exist in flask 2.0.0. It exists in versions: 3.0.0.",
+      "exists_in": [
+       "3.0.0"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     },
+     {
+      "line": 22,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     },
+     {
+      "line": 23,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json",
+      "message": "`flask.Flask.json` was not found in flask 2.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     },
+     {
+      "line": 23,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     }
+    ],
+    "2.0.1": [
+     {
+      "line": 14,
+      "kind": "missing_member",
+      "symbol": "flask.json.provider",
+      "message": "`flask.json.provider` does not exist in flask 2.0.1. It exists in versions: 3.0.0.",
+      "exists_in": [
+       "3.0.0"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     },
+     {
+      "line": 22,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.1 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     },
+     {
+      "line": 23,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json",
+      "message": "`flask.Flask.json` was not found in flask 2.0.1 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     },
+     {
+      "line": 23,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.1 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "170",
+   "library": "flask",
+   "version": "2.0.0",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.0.1": [],
+    "3.0.0": [
+     {
+      "line": 25,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_encoder",
+      "message": "`flask.Flask.json_encoder` does not exist in flask 3.0.0. It exists in versions: 2.0.0, 2.0.1.",
+      "exists_in": [
+       "2.0.0",
+       "2.0.1"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "171",
+   "library": "flask",
+   "version": "3.0.0",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [
+    {
+     "line": 24,
+     "kind": "missing_member",
+     "symbol": "flask.Flask.json",
+     "message": "`flask.Flask.json` was not found in flask 3.0.0 (nor in any other known version).",
+     "exists_in": [],
+     "suggestions": [],
+     "severity": "warning"
+    }
+   ],
+   "other_versions": {
+    "2.0.0": [
+     {
+      "line": 16,
+      "kind": "missing_member",
+      "symbol": "flask.json.provider",
+      "message": "`flask.json.provider` does not exist in flask 2.0.0. It exists in versions: 3.0.0.",
+      "exists_in": [
+       "3.0.0"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     },
+     {
+      "line": 23,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     },
+     {
+      "line": 24,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json",
+      "message": "`flask.Flask.json` was not found in flask 2.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     },
+     {
+      "line": 24,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.0 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     }
+    ],
+    "2.0.1": [
+     {
+      "line": 16,
+      "kind": "missing_member",
+      "symbol": "flask.json.provider",
+      "message": "`flask.json.provider` does not exist in flask 2.0.1. It exists in versions: 3.0.0.",
+      "exists_in": [
+       "3.0.0"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     },
+     {
+      "line": 23,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.1 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     },
+     {
+      "line": 24,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json",
+      "message": "`flask.Flask.json` was not found in flask 2.0.1 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     },
+     {
+      "line": 24,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_provider_class",
+      "message": "`flask.Flask.json_provider_class` was not found in flask 2.0.1 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [
+       "response_class"
+      ],
+      "severity": "warning"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "172",
+   "library": "flask",
+   "version": "2.0.0",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.0.1": [],
+    "3.0.0": [
+     {
+      "line": 29,
+      "kind": "missing_member",
+      "symbol": "flask.Flask.json_encoder",
+      "message": "`flask.Flask.json_encoder` does not exist in flask 3.0.0. It exists in versions: 2.0.0, 2.0.1.",
+      "exists_in": [
+       "2.0.0",
+       "2.0.1"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "173",
+   "library": "flask",
+   "version": "3.0.0",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.0.0": [],
+    "2.0.1": []
+   }
+  },
+  {
+   "example_id": "174",
+   "library": "flask",
+   "version": "2.0.0",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.0.1": [],
+    "3.0.0": [
+     {
+      "line": 14,
+      "kind": "missing_member",
+      "symbol": "flask.safe_join",
+      "message": "`flask.safe_join` does not exist in flask 3.0.0. It exists in versions: 2.0.0, 2.0.1.",
+      "exists_in": [
+       "2.0.0",
+       "2.0.1"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "27",
+   "library": "networkx",
+   "version": "2.8",
+   "type_of_change": "argument change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.4": [
+     {
+      "line": 3,
+      "kind": "missing_param",
+      "symbol": "networkx.algorithms.community.greedy_modularity_communities(cutoff=)",
+      "message": "`networkx.algorithms.community.greedy_modularity_communities` has no parameter `cutoff` in networkx 2.4. It exists in versions: 2.8.",
+      "exists_in": [
+       "2.8"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "2.5": [
+     {
+      "line": 3,
+      "kind": "missing_param",
+      "symbol": "networkx.algorithms.community.greedy_modularity_communities(cutoff=)",
+      "message": "`networkx.algorithms.community.greedy_modularity_communities` has no parameter `cutoff` in networkx 2.5. It exists in versions: 2.8.",
+      "exists_in": [
+       "2.8"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "2.6": [
+     {
+      "line": 3,
+      "kind": "missing_param",
+      "symbol": "networkx.algorithms.community.greedy_modularity_communities(cutoff=)",
+      "message": "`networkx.algorithms.community.greedy_modularity_communities` has no parameter `cutoff` in networkx 2.6. It exists in versions: 2.8.",
+      "exists_in": [
+       "2.8"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "2.7": [
+     {
+      "line": 3,
+      "kind": "missing_param",
+      "symbol": "networkx.algorithms.community.greedy_modularity_communities(cutoff=)",
+      "message": "`networkx.algorithms.community.greedy_modularity_communities` has no parameter `cutoff` in networkx 2.7. It exists in versions: 2.8.",
+      "exists_in": [
+       "2.8"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "28",
+   "library": "networkx",
+   "version": "2.7",
+   "type_of_change": "argument change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.4": [
+     {
+      "line": 3,
+      "kind": "missing_param",
+      "symbol": "networkx.algorithms.community.greedy_modularity_communities(n_communities=)",
+      "message": "`networkx.algorithms.community.greedy_modularity_communities` has no parameter `n_communities` in networkx 2.4. It exists in versions: 2.7, 2.8.",
+      "exists_in": [
+       "2.7",
+       "2.8"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "2.5": [
+     {
+      "line": 3,
+      "kind": "missing_param",
+      "symbol": "networkx.algorithms.community.greedy_modularity_communities(n_communities=)",
+      "message": "`networkx.algorithms.community.greedy_modularity_communities` has no parameter `n_communities` in networkx 2.5. It exists in versions: 2.7, 2.8.",
+      "exists_in": [
+       "2.7",
+       "2.8"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "2.6": [
+     {
+      "line": 3,
+      "kind": "missing_param",
+      "symbol": "networkx.algorithms.community.greedy_modularity_communities(n_communities=)",
+      "message": "`networkx.algorithms.community.greedy_modularity_communities` has no parameter `n_communities` in networkx 2.6. It exists in versions: 2.7, 2.8.",
+      "exists_in": [
+       "2.7",
+       "2.8"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "2.8": []
+   }
+  },
+  {
+   "example_id": "29",
+   "library": "networkx",
+   "version": "2.8",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.4": [],
+    "2.5": [],
+    "2.6": [],
+    "2.7": []
+   }
+  },
+  {
+   "example_id": "30",
+   "library": "networkx",
+   "version": "2.6",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.4": [],
+    "2.5": [],
+    "2.7": [],
+    "2.8": []
+   }
+  },
+  {
+   "example_id": "31",
+   "library": "networkx",
+   "version": "2.5",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.4": [
+     {
+      "line": 3,
+      "kind": "missing_member",
+      "symbol": "networkx.algorithms.community.naive_greedy_modularity_communities",
+      "message": "`networkx.algorithms.community.naive_greedy_modularity_communities` does not exist in networkx 2.4. It exists in versions: 2.6, 2.5, 2.7, 2.8.",
+      "exists_in": [
+       "2.6",
+       "2.5",
+       "2.7",
+       "2.8"
+      ],
+      "suggestions": [
+       "greedy_modularity_communities",
+       "asyn_lpa_communities"
+      ],
+      "severity": "error"
+     }
+    ],
+    "2.6": [],
+    "2.7": [],
+    "2.8": []
+   }
+  },
+  {
+   "example_id": "32",
+   "library": "networkx",
+   "version": "2.4",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.5": [],
+    "2.6": [],
+    "2.7": [],
+    "2.8": []
+   }
+  },
+  {
+   "example_id": "33",
+   "library": "networkx",
+   "version": "2.5",
+   "type_of_change": "name change (attribute)",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.4": [],
+    "2.6": [],
+    "2.7": [],
+    "2.8": []
+   }
+  },
+  {
+   "example_id": "34",
+   "library": "networkx",
+   "version": "2.5",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.4": [],
+    "2.6": [],
+    "2.7": [],
+    "2.8": []
+   }
+  },
+  {
+   "example_id": "35",
+   "library": "networkx",
+   "version": "2.5",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "2.4": [],
+    "2.6": [],
+    "2.7": [],
+    "2.8": []
+   }
+  },
+  {
+   "example_id": "66",
+   "library": "numpy",
+   "version": "1.21.0",
+   "type_of_change": "argument change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.25.0": []
+   }
+  },
+  {
+   "example_id": "67",
+   "library": "numpy",
+   "version": "1.21.0",
+   "type_of_change": "argument change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.25.0": []
+   }
+  },
+  {
+   "example_id": "68",
+   "library": "numpy",
+   "version": "1.21.0",
+   "type_of_change": "argument change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.25.0": []
+   }
+  },
+  {
+   "example_id": "69",
+   "library": "numpy",
+   "version": "1.25.0",
+   "type_of_change": "deprecation",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.21.0": []
+   }
+  },
+  {
+   "example_id": "70",
+   "library": "numpy",
+   "version": "1.21.0",
+   "type_of_change": "deprecation",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.25.0": []
+   }
+  },
+  {
+   "example_id": "71",
+   "library": "numpy",
+   "version": "1.25.0",
+   "type_of_change": "deprecation",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.21.0": []
+   }
+  },
+  {
+   "example_id": "72",
+   "library": "numpy",
+   "version": "1.25.0",
+   "type_of_change": "deprecation",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.21.0": []
+   }
+  },
+  {
+   "example_id": "73",
+   "library": "numpy",
+   "version": "1.25.0",
+   "type_of_change": "deprecation",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.21.0": []
+   }
+  },
+  {
+   "example_id": "74",
+   "library": "numpy",
+   "version": "1.25.0",
+   "type_of_change": "deprecation",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.21.0": []
+   }
+  },
+  {
+   "example_id": "75",
+   "library": "numpy",
+   "version": "1.25.0",
+   "type_of_change": "deprecation",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.21.0": []
+   }
+  },
+  {
+   "example_id": "76",
+   "library": "numpy",
+   "version": "1.21.0",
+   "type_of_change": "deprecation",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.25.0": []
+   }
+  },
+  {
+   "example_id": "77",
+   "library": "numpy",
+   "version": "1.21.0",
+   "type_of_change": "deprecation",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.25.0": []
+   }
+  },
+  {
+   "example_id": "78",
+   "library": "numpy",
+   "version": "1.21.0",
+   "type_of_change": "deprecation",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.25.0": []
+   }
+  },
+  {
+   "example_id": "79",
+   "library": "numpy",
+   "version": "1.21.0",
+   "type_of_change": "deprecation",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.25.0": []
+   }
+  },
+  {
+   "example_id": "80",
+   "library": "numpy",
+   "version": "1.21.0",
+   "type_of_change": "deprecation",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.25.0": []
+   }
+  },
+  {
+   "example_id": "56",
+   "library": "pandas",
+   "version": "1.5.0",
+   "type_of_change": "output behaviour",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.4.0": [],
+    "1.5.1": [],
+    "2": []
+   }
+  },
+  {
+   "example_id": "57",
+   "library": "pandas",
+   "version": "1.5.1",
+   "type_of_change": "output behaviour",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.4.0": [],
+    "1.5.0": [],
+    "2": []
+   }
+  },
+  {
+   "example_id": "58",
+   "library": "pandas",
+   "version": "1.5.0",
+   "type_of_change": "gh\noutput behaviour",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.4.0": [],
+    "1.5.1": [],
+    "2": []
+   }
+  },
+  {
+   "example_id": "59",
+   "library": "pandas",
+   "version": "2",
+   "type_of_change": "output behaviour",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.4.0": [],
+    "1.5.0": [],
+    "1.5.1": []
+   }
+  },
+  {
+   "example_id": "60",
+   "library": "pandas",
+   "version": "1.5.0",
+   "type_of_change": "output behaviour",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.4.0": [],
+    "1.5.1": [],
+    "2": []
+   }
+  },
+  {
+   "example_id": "61",
+   "library": "pandas",
+   "version": "2",
+   "type_of_change": "output behaviour",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.4.0": [],
+    "1.5.0": [],
+    "1.5.1": []
+   }
+  },
+  {
+   "example_id": "62",
+   "library": "pandas",
+   "version": "1.4.0",
+   "type_of_change": "output behaviour",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.5.0": [],
+    "1.5.1": [],
+    "2": []
+   }
+  },
+  {
+   "example_id": "63",
+   "library": "pandas",
+   "version": "1.4.0",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.5.0": [],
+    "1.5.1": [],
+    "2": [
+     {
+      "line": 3,
+      "kind": "missing_member",
+      "symbol": "pandas.DataFrame.append",
+      "message": "`pandas.DataFrame.append` does not exist in pandas 2. It exists in versions: 1.5.1, 1.5.0, 1.4.0.",
+      "exists_in": [
+       "1.5.1",
+       "1.5.0",
+       "1.4.0"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     },
+     {
+      "line": 3,
+      "kind": "missing_member",
+      "symbol": "pandas.Series.append",
+      "message": "`pandas.Series.append` does not exist in pandas 2. It exists in versions: 1.5.1, 1.5.0, 1.4.0.",
+      "exists_in": [
+       "1.5.1",
+       "1.5.0",
+       "1.4.0"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "64",
+   "library": "pandas",
+   "version": "2",
+   "type_of_change": "output behaviour",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.4.0": [],
+    "1.5.0": [],
+    "1.5.1": []
+   }
+  },
+  {
+   "example_id": "65",
+   "library": "pandas",
+   "version": "2",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.4.0": [],
+    "1.5.0": [],
+    "1.5.1": []
+   }
+  },
+  {
+   "example_id": "43",
+   "library": "scikit-learn",
+   "version": "1.1",
+   "type_of_change": "output behaviour",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.2": [],
+    "1.3": []
+   }
+  },
+  {
+   "example_id": "44",
+   "library": "scikit-learn",
+   "version": "1.1",
+   "type_of_change": "argument change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.2": [],
+    "1.3": []
+   }
+  },
+  {
+   "example_id": "45",
+   "library": "scikit-learn",
+   "version": "1.2",
+   "type_of_change": "attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.1": [],
+    "1.3": []
+   }
+  },
+  {
+   "example_id": "46",
+   "library": "scikit-learn",
+   "version": "1.3",
+   "type_of_change": "attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.1": [],
+    "1.2": []
+   }
+  },
+  {
+   "example_id": "47",
+   "library": "scikit-learn",
+   "version": "1.1",
+   "type_of_change": "output behaviour",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.2": [],
+    "1.3": []
+   }
+  },
+  {
+   "example_id": "48",
+   "library": "scikit-learn",
+   "version": "1.1",
+   "type_of_change": "argument change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.2": [],
+    "1.3": []
+   }
+  },
+  {
+   "example_id": "49",
+   "library": "scikit-learn",
+   "version": "1.3",
+   "type_of_change": "argument change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.1": [],
+    "1.2": []
+   }
+  },
+  {
+   "example_id": "50",
+   "library": "scikit-learn",
+   "version": "1.1",
+   "type_of_change": "argument change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.2": [],
+    "1.3": []
+   }
+  },
+  {
+   "example_id": "51",
+   "library": "scikit-learn",
+   "version": "1.3",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.1": [],
+    "1.2": []
+   }
+  },
+  {
+   "example_id": "52",
+   "library": "scikit-learn",
+   "version": "1.2",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.1": [],
+    "1.3": []
+   }
+  },
+  {
+   "example_id": "53",
+   "library": "scikit-learn",
+   "version": "1.1",
+   "type_of_change": "argument change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.2": [],
+    "1.3": []
+   }
+  },
+  {
+   "example_id": "54",
+   "library": "scikit-learn",
+   "version": "1.2",
+   "type_of_change": "argument change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.1": [],
+    "1.3": []
+   }
+  },
+  {
+   "example_id": "109",
+   "library": "scipy",
+   "version": "1.7.3",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.8.1": [
+     {
+      "line": 4,
+      "kind": "missing_member",
+      "symbol": "scipy.spatial.distance.wminkowski",
+      "message": "`scipy.spatial.distance.wminkowski` does not exist in scipy 1.8.1. It exists in versions: 1.7.3.",
+      "exists_in": [
+       "1.7.3"
+      ],
+      "suggestions": [
+       "minkowski"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.9.1": [
+     {
+      "line": 4,
+      "kind": "missing_member",
+      "symbol": "scipy.spatial.distance.wminkowski",
+      "message": "`scipy.spatial.distance.wminkowski` does not exist in scipy 1.9.1. It exists in versions: 1.7.3.",
+      "exists_in": [
+       "1.7.3"
+      ],
+      "suggestions": [
+       "minkowski"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.9.2": [
+     {
+      "line": 4,
+      "kind": "missing_member",
+      "symbol": "scipy.spatial.distance.wminkowski",
+      "message": "`scipy.spatial.distance.wminkowski` does not exist in scipy 1.9.2. It exists in versions: 1.7.3.",
+      "exists_in": [
+       "1.7.3"
+      ],
+      "suggestions": [
+       "minkowski"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.10.1": [
+     {
+      "line": 4,
+      "kind": "missing_member",
+      "symbol": "scipy.spatial.distance.wminkowski",
+      "message": "`scipy.spatial.distance.wminkowski` does not exist in scipy 1.10.1. It exists in versions: 1.7.3.",
+      "exists_in": [
+       "1.7.3"
+      ],
+      "suggestions": [
+       "minkowski"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.11.1": [
+     {
+      "line": 4,
+      "kind": "missing_member",
+      "symbol": "scipy.spatial.distance.wminkowski",
+      "message": "`scipy.spatial.distance.wminkowski` does not exist in scipy 1.11.1. It exists in versions: 1.7.3.",
+      "exists_in": [
+       "1.7.3"
+      ],
+      "suggestions": [
+       "minkowski"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.11.2": [
+     {
+      "line": 4,
+      "kind": "missing_member",
+      "symbol": "scipy.spatial.distance.wminkowski",
+      "message": "`scipy.spatial.distance.wminkowski` does not exist in scipy 1.11.2. It exists in versions: 1.7.3.",
+      "exists_in": [
+       "1.7.3"
+      ],
+      "suggestions": [
+       "minkowski"
+      ],
+      "severity": "error"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "110",
+   "library": "scipy",
+   "version": "1.9.2",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "111",
+   "library": "scipy",
+   "version": "1.8.1",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.9.1": [],
+    "1.9.2": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "112",
+   "library": "scipy",
+   "version": "1.9.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "113",
+   "library": "scipy",
+   "version": "1.8.1",
+   "type_of_change": "output change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.9.1": [],
+    "1.9.2": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "114",
+   "library": "scipy",
+   "version": "1.9.2",
+   "type_of_change": "output change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "115",
+   "library": "scipy",
+   "version": "1.8.1",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.9.1": [],
+    "1.9.2": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "116",
+   "library": "scipy",
+   "version": "1.9.2",
+   "type_of_change": "name change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "117",
+   "library": "scipy",
+   "version": "1.8.1",
+   "type_of_change": "output change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.9.1": [],
+    "1.9.2": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "118",
+   "library": "scipy",
+   "version": "1.9.2",
+   "type_of_change": "output change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "119",
+   "library": "scipy",
+   "version": "1.11.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.9.2": [],
+    "1.10.1": [],
+    "1.11.1": []
+   }
+  },
+  {
+   "example_id": "120",
+   "library": "scipy",
+   "version": "1.9.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "121",
+   "library": "scipy",
+   "version": "1.9.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "122",
+   "library": "scipy",
+   "version": "1.11.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.9.2": [],
+    "1.10.1": [],
+    "1.11.1": []
+   }
+  },
+  {
+   "example_id": "123",
+   "library": "scipy",
+   "version": "1.9.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "124",
+   "library": "scipy",
+   "version": "1.11.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.9.2": [],
+    "1.10.1": [],
+    "1.11.1": []
+   }
+  },
+  {
+   "example_id": "125",
+   "library": "scipy",
+   "version": "1.11.2",
+   "type_of_change": "other library or new feature",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [
+     {
+      "line": 4,
+      "kind": "missing_member",
+      "symbol": "scipy.signal.windows.lanczos",
+      "message": "`scipy.signal.windows.lanczos` does not exist in scipy 1.7.3. It exists in versions: 1.11.1, 1.10.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.10.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.8.1": [
+     {
+      "line": 4,
+      "kind": "missing_member",
+      "symbol": "scipy.signal.windows.lanczos",
+      "message": "`scipy.signal.windows.lanczos` does not exist in scipy 1.8.1. It exists in versions: 1.11.1, 1.10.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.10.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.9.1": [
+     {
+      "line": 4,
+      "kind": "missing_member",
+      "symbol": "scipy.signal.windows.lanczos",
+      "message": "`scipy.signal.windows.lanczos` does not exist in scipy 1.9.1. It exists in versions: 1.11.1, 1.10.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.10.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.9.2": [
+     {
+      "line": 4,
+      "kind": "missing_member",
+      "symbol": "scipy.signal.windows.lanczos",
+      "message": "`scipy.signal.windows.lanczos` does not exist in scipy 1.9.2. It exists in versions: 1.11.1, 1.10.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.10.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.10.1": [],
+    "1.11.1": []
+   }
+  },
+  {
+   "example_id": "126",
+   "library": "scipy",
+   "version": "1.9.2",
+   "type_of_change": "other library or new feature",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "127",
+   "library": "scipy",
+   "version": "1.10.1",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.gaussian_filter1d(radius=)",
+      "message": "`scipy.ndimage.gaussian_filter1d` has no parameter `radius` in scipy 1.7.3. It exists in versions: 1.11.2, 1.10.1, 1.11.1.",
+      "exists_in": [
+       "1.11.2",
+       "1.10.1",
+       "1.11.1"
+      ],
+      "suggestions": [
+       "axis"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.8.1": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.gaussian_filter1d(radius=)",
+      "message": "`scipy.ndimage.gaussian_filter1d` has no parameter `radius` in scipy 1.8.1. It exists in versions: 1.11.2, 1.10.1, 1.11.1.",
+      "exists_in": [
+       "1.11.2",
+       "1.10.1",
+       "1.11.1"
+      ],
+      "suggestions": [
+       "axis"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.9.1": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.gaussian_filter1d(radius=)",
+      "message": "`scipy.ndimage.gaussian_filter1d` has no parameter `radius` in scipy 1.9.1. It exists in versions: 1.11.2, 1.10.1, 1.11.1.",
+      "exists_in": [
+       "1.11.2",
+       "1.10.1",
+       "1.11.1"
+      ],
+      "suggestions": [
+       "axis"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.9.2": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.gaussian_filter1d(radius=)",
+      "message": "`scipy.ndimage.gaussian_filter1d` has no parameter `radius` in scipy 1.9.2. It exists in versions: 1.11.2, 1.10.1, 1.11.1.",
+      "exists_in": [
+       "1.11.2",
+       "1.10.1",
+       "1.11.1"
+      ],
+      "suggestions": [
+       "axis"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "128",
+   "library": "scipy",
+   "version": "1.9.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "129",
+   "library": "scipy",
+   "version": "1.11.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.rank_filter(axes=)",
+      "message": "`scipy.ndimage.rank_filter` has no parameter `axes` in scipy 1.7.3. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.8.1": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.rank_filter(axes=)",
+      "message": "`scipy.ndimage.rank_filter` has no parameter `axes` in scipy 1.8.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.9.1": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.rank_filter(axes=)",
+      "message": "`scipy.ndimage.rank_filter` has no parameter `axes` in scipy 1.9.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.9.2": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.rank_filter(axes=)",
+      "message": "`scipy.ndimage.rank_filter` has no parameter `axes` in scipy 1.9.2. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.10.1": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.rank_filter(axes=)",
+      "message": "`scipy.ndimage.rank_filter` has no parameter `axes` in scipy 1.10.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.11.1": []
+   }
+  },
+  {
+   "example_id": "130",
+   "library": "scipy",
+   "version": "1.9.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "131",
+   "library": "scipy",
+   "version": "1.11.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.percentile_filter(axes=)",
+      "message": "`scipy.ndimage.percentile_filter` has no parameter `axes` in scipy 1.7.3. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.8.1": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.percentile_filter(axes=)",
+      "message": "`scipy.ndimage.percentile_filter` has no parameter `axes` in scipy 1.8.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.9.1": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.percentile_filter(axes=)",
+      "message": "`scipy.ndimage.percentile_filter` has no parameter `axes` in scipy 1.9.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.9.2": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.percentile_filter(axes=)",
+      "message": "`scipy.ndimage.percentile_filter` has no parameter `axes` in scipy 1.9.2. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.10.1": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.percentile_filter(axes=)",
+      "message": "`scipy.ndimage.percentile_filter` has no parameter `axes` in scipy 1.10.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.11.1": []
+   }
+  },
+  {
+   "example_id": "132",
+   "library": "scipy",
+   "version": "1.9.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "133",
+   "library": "scipy",
+   "version": "1.11.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.median_filter(axes=)",
+      "message": "`scipy.ndimage.median_filter` has no parameter `axes` in scipy 1.7.3. It exists in versions: 1.11.2, 1.11.1.",
+      "exists_in": [
+       "1.11.2",
+       "1.11.1"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.8.1": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.median_filter(axes=)",
+      "message": "`scipy.ndimage.median_filter` has no parameter `axes` in scipy 1.8.1. It exists in versions: 1.11.2, 1.11.1.",
+      "exists_in": [
+       "1.11.2",
+       "1.11.1"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.9.1": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.median_filter(axes=)",
+      "message": "`scipy.ndimage.median_filter` has no parameter `axes` in scipy 1.9.1. It exists in versions: 1.11.2, 1.11.1.",
+      "exists_in": [
+       "1.11.2",
+       "1.11.1"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.9.2": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.median_filter(axes=)",
+      "message": "`scipy.ndimage.median_filter` has no parameter `axes` in scipy 1.9.2. It exists in versions: 1.11.2, 1.11.1.",
+      "exists_in": [
+       "1.11.2",
+       "1.11.1"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.10.1": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.median_filter(axes=)",
+      "message": "`scipy.ndimage.median_filter` has no parameter `axes` in scipy 1.10.1. It exists in versions: 1.11.2, 1.11.1.",
+      "exists_in": [
+       "1.11.2",
+       "1.11.1"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.11.1": []
+   }
+  },
+  {
+   "example_id": "134",
+   "library": "scipy",
+   "version": "1.9.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "135",
+   "library": "scipy",
+   "version": "1.11.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.uniform_filter(axes=)",
+      "message": "`scipy.ndimage.uniform_filter` has no parameter `axes` in scipy 1.7.3. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.8.1": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.uniform_filter(axes=)",
+      "message": "`scipy.ndimage.uniform_filter` has no parameter `axes` in scipy 1.8.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.9.1": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.uniform_filter(axes=)",
+      "message": "`scipy.ndimage.uniform_filter` has no parameter `axes` in scipy 1.9.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.9.2": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.uniform_filter(axes=)",
+      "message": "`scipy.ndimage.uniform_filter` has no parameter `axes` in scipy 1.9.2. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.10.1": [
+     {
+      "line": 4,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.uniform_filter(axes=)",
+      "message": "`scipy.ndimage.uniform_filter` has no parameter `axes` in scipy 1.10.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.11.1": []
+   }
+  },
+  {
+   "example_id": "136",
+   "library": "scipy",
+   "version": "1.9.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "137",
+   "library": "scipy",
+   "version": "1.11.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.minimum_filter(axes=)",
+      "message": "`scipy.ndimage.minimum_filter` has no parameter `axes` in scipy 1.7.3. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.8.1": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.minimum_filter(axes=)",
+      "message": "`scipy.ndimage.minimum_filter` has no parameter `axes` in scipy 1.8.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.9.1": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.minimum_filter(axes=)",
+      "message": "`scipy.ndimage.minimum_filter` has no parameter `axes` in scipy 1.9.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.9.2": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.minimum_filter(axes=)",
+      "message": "`scipy.ndimage.minimum_filter` has no parameter `axes` in scipy 1.9.2. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.10.1": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.minimum_filter(axes=)",
+      "message": "`scipy.ndimage.minimum_filter` has no parameter `axes` in scipy 1.10.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.11.1": []
+   }
+  },
+  {
+   "example_id": "138",
+   "library": "scipy",
+   "version": "1.9.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "139",
+   "library": "scipy",
+   "version": "1.11.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.maximum_filter(axes=)",
+      "message": "`scipy.ndimage.maximum_filter` has no parameter `axes` in scipy 1.7.3. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.8.1": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.maximum_filter(axes=)",
+      "message": "`scipy.ndimage.maximum_filter` has no parameter `axes` in scipy 1.8.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.9.1": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.maximum_filter(axes=)",
+      "message": "`scipy.ndimage.maximum_filter` has no parameter `axes` in scipy 1.9.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.9.2": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.maximum_filter(axes=)",
+      "message": "`scipy.ndimage.maximum_filter` has no parameter `axes` in scipy 1.9.2. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.10.1": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.maximum_filter(axes=)",
+      "message": "`scipy.ndimage.maximum_filter` has no parameter `axes` in scipy 1.10.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.11.1": []
+   }
+  },
+  {
+   "example_id": "140",
+   "library": "scipy",
+   "version": "1.9.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "141",
+   "library": "scipy",
+   "version": "1.11.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.gaussian_filter(axes=)",
+      "message": "`scipy.ndimage.gaussian_filter` has no parameter `axes` in scipy 1.7.3. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.8.1": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.gaussian_filter(axes=)",
+      "message": "`scipy.ndimage.gaussian_filter` has no parameter `axes` in scipy 1.8.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.9.1": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.gaussian_filter(axes=)",
+      "message": "`scipy.ndimage.gaussian_filter` has no parameter `axes` in scipy 1.9.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.9.2": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.gaussian_filter(axes=)",
+      "message": "`scipy.ndimage.gaussian_filter` has no parameter `axes` in scipy 1.9.2. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.10.1": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "scipy.ndimage.gaussian_filter(axes=)",
+      "message": "`scipy.ndimage.gaussian_filter` has no parameter `axes` in scipy 1.10.1. It exists in versions: 1.11.1, 1.11.2.",
+      "exists_in": [
+       "1.11.1",
+       "1.11.2"
+      ],
+      "suggestions": [],
+      "severity": "error"
+     }
+    ],
+    "1.11.1": []
+   }
+  },
+  {
+   "example_id": "142",
+   "library": "scipy",
+   "version": "1.9.2",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "157",
+   "library": "scipy",
+   "version": "1.11.1",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.9.2": [],
+    "1.10.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "158",
+   "library": "scipy",
+   "version": "1.9.1",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.2": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "159",
+   "library": "scipy",
+   "version": "1.11.1",
+   "type_of_change": "output change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.9.2": [],
+    "1.10.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "160",
+   "library": "scipy",
+   "version": "1.8.1",
+   "type_of_change": "output change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.9.1": [],
+    "1.9.2": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "161",
+   "library": "scipy",
+   "version": "1.11.1",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.8.1": [],
+    "1.9.1": [],
+    "1.9.2": [],
+    "1.10.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "162",
+   "library": "scipy",
+   "version": "1.8.1",
+   "type_of_change": "argument or attribute change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.7.3": [],
+    "1.9.1": [],
+    "1.9.2": [],
+    "1.10.1": [],
+    "1.11.1": [],
+    "1.11.2": []
+   }
+  },
+  {
+   "example_id": "175",
+   "library": "sympy",
+   "version": "1.9",
+   "type_of_change": "new func/method/class",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.10": [],
+    "1.11": [],
+    "1.12": [],
+    "1.13": []
+   }
+  },
+  {
+   "example_id": "176",
+   "library": "sympy",
+   "version": "1.9",
+   "type_of_change": "new func/method/class",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.10": [],
+    "1.11": [],
+    "1.12": [],
+    "1.13": []
+   }
+  },
+  {
+   "example_id": "177",
+   "library": "sympy",
+   "version": "1.9",
+   "type_of_change": "new func/method/class",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.10": [],
+    "1.11": [],
+    "1.12": [],
+    "1.13": []
+   }
+  },
+  {
+   "example_id": "178",
+   "library": "sympy",
+   "version": "1.11",
+   "type_of_change": "breaking change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [
+     {
+      "line": 3,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.quantum.trace",
+      "message": "`sympy.physics.quantum.trace` does not exist in sympy 1.9. It exists in versions: 1.11, 1.12, 1.10, 1.13.",
+      "exists_in": [
+       "1.11",
+       "1.12",
+       "1.10",
+       "1.13"
+      ],
+      "suggestions": [
+       "matrixcache",
+       "state",
+       "State"
+      ],
+      "severity": "error"
+     },
+     {
+      "line": 4,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.quantum.trace",
+      "message": "`sympy.physics.quantum.trace` does not exist in sympy 1.9. It exists in versions: 1.11, 1.12, 1.10, 1.13.",
+      "exists_in": [
+       "1.11",
+       "1.12",
+       "1.10",
+       "1.13"
+      ],
+      "suggestions": [
+       "matrixcache",
+       "state",
+       "State"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.10": [],
+    "1.12": [],
+    "1.13": []
+   }
+  },
+  {
+   "example_id": "179",
+   "library": "sympy",
+   "version": "1.11",
+   "type_of_change": "breaking change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.10": [],
+    "1.12": [],
+    "1.13": []
+   }
+  },
+  {
+   "example_id": "180",
+   "library": "sympy",
+   "version": "1.11",
+   "type_of_change": "new func/method/class",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [
+     {
+      "line": 1,
+      "kind": "missing_member",
+      "symbol": "sympy.parsing.mathematica.parse_mathematica",
+      "message": "`sympy.parsing.mathematica.parse_mathematica` does not exist in sympy 1.9. It exists in versions: 1.11, 1.12, 1.13.",
+      "exists_in": [
+       "1.11",
+       "1.12",
+       "1.13"
+      ],
+      "suggestions": [
+       "mathematica"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.10": [
+     {
+      "line": 1,
+      "kind": "missing_member",
+      "symbol": "sympy.parsing.mathematica.parse_mathematica",
+      "message": "`sympy.parsing.mathematica.parse_mathematica` does not exist in sympy 1.10. It exists in versions: 1.11, 1.12, 1.13.",
+      "exists_in": [
+       "1.11",
+       "1.12",
+       "1.13"
+      ],
+      "suggestions": [
+       "mathematica"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.12": [],
+    "1.13": []
+   }
+  },
+  {
+   "example_id": "181",
+   "library": "sympy",
+   "version": "1.12",
+   "type_of_change": "argument change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "sympy.physics.mechanics.PinJoint(child_point=)",
+      "message": "`sympy.physics.mechanics.PinJoint` has no parameter `child_point` in sympy 1.9. It exists in versions: 1.12, 1.13.",
+      "exists_in": [
+       "1.12",
+       "1.13"
+      ],
+      "suggestions": [
+       "child_joint_pos",
+       "child_axis",
+       "child"
+      ],
+      "severity": "error"
+     },
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "sympy.physics.mechanics.PinJoint(parent_point=)",
+      "message": "`sympy.physics.mechanics.PinJoint` has no parameter `parent_point` in sympy 1.9. It exists in versions: 1.13, 1.12.",
+      "exists_in": [
+       "1.13",
+       "1.12"
+      ],
+      "suggestions": [
+       "parent_joint_pos",
+       "parent_axis",
+       "parent"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.10": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "sympy.physics.mechanics.PinJoint(child_point=)",
+      "message": "`sympy.physics.mechanics.PinJoint` has no parameter `child_point` in sympy 1.10. It exists in versions: 1.12, 1.13.",
+      "exists_in": [
+       "1.12",
+       "1.13"
+      ],
+      "suggestions": [
+       "child_joint_pos",
+       "child_axis",
+       "child"
+      ],
+      "severity": "error"
+     },
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "sympy.physics.mechanics.PinJoint(parent_point=)",
+      "message": "`sympy.physics.mechanics.PinJoint` has no parameter `parent_point` in sympy 1.10. It exists in versions: 1.13, 1.12.",
+      "exists_in": [
+       "1.13",
+       "1.12"
+      ],
+      "suggestions": [
+       "parent_joint_pos",
+       "parent_axis",
+       "parent"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.11": [
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "sympy.physics.mechanics.PinJoint(child_point=)",
+      "message": "`sympy.physics.mechanics.PinJoint` has no parameter `child_point` in sympy 1.11. It exists in versions: 1.12, 1.13.",
+      "exists_in": [
+       "1.12",
+       "1.13"
+      ],
+      "suggestions": [
+       "child_joint_pos",
+       "child_axis",
+       "child"
+      ],
+      "severity": "error"
+     },
+     {
+      "line": 5,
+      "kind": "missing_param",
+      "symbol": "sympy.physics.mechanics.PinJoint(parent_point=)",
+      "message": "`sympy.physics.mechanics.PinJoint` has no parameter `parent_point` in sympy 1.11. It exists in versions: 1.13, 1.12.",
+      "exists_in": [
+       "1.13",
+       "1.12"
+      ],
+      "suggestions": [
+       "parent_joint_pos",
+       "parent_axis",
+       "parent"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.13": []
+   }
+  },
+  {
+   "example_id": "182",
+   "library": "sympy",
+   "version": "1.12",
+   "type_of_change": "output behaviour",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [
+     {
+      "line": 7,
+      "kind": "missing_param",
+      "symbol": "sympy.physics.mechanics.PinJoint(child_point=)",
+      "message": "`sympy.physics.mechanics.PinJoint` has no parameter `child_point` in sympy 1.9. It exists in versions: 1.12, 1.13.",
+      "exists_in": [
+       "1.12",
+       "1.13"
+      ],
+      "suggestions": [
+       "child_joint_pos",
+       "child_axis",
+       "child"
+      ],
+      "severity": "error"
+     },
+     {
+      "line": 7,
+      "kind": "missing_param",
+      "symbol": "sympy.physics.mechanics.PinJoint(parent_point=)",
+      "message": "`sympy.physics.mechanics.PinJoint` has no parameter `parent_point` in sympy 1.9. It exists in versions: 1.13, 1.12.",
+      "exists_in": [
+       "1.13",
+       "1.12"
+      ],
+      "suggestions": [
+       "parent_joint_pos",
+       "parent_axis",
+       "parent"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.10": [
+     {
+      "line": 7,
+      "kind": "missing_param",
+      "symbol": "sympy.physics.mechanics.PinJoint(child_point=)",
+      "message": "`sympy.physics.mechanics.PinJoint` has no parameter `child_point` in sympy 1.10. It exists in versions: 1.12, 1.13.",
+      "exists_in": [
+       "1.12",
+       "1.13"
+      ],
+      "suggestions": [
+       "child_joint_pos",
+       "child_axis",
+       "child"
+      ],
+      "severity": "error"
+     },
+     {
+      "line": 7,
+      "kind": "missing_param",
+      "symbol": "sympy.physics.mechanics.PinJoint(parent_point=)",
+      "message": "`sympy.physics.mechanics.PinJoint` has no parameter `parent_point` in sympy 1.10. It exists in versions: 1.13, 1.12.",
+      "exists_in": [
+       "1.13",
+       "1.12"
+      ],
+      "suggestions": [
+       "parent_joint_pos",
+       "parent_axis",
+       "parent"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.11": [
+     {
+      "line": 7,
+      "kind": "missing_param",
+      "symbol": "sympy.physics.mechanics.PinJoint(child_point=)",
+      "message": "`sympy.physics.mechanics.PinJoint` has no parameter `child_point` in sympy 1.11. It exists in versions: 1.12, 1.13.",
+      "exists_in": [
+       "1.12",
+       "1.13"
+      ],
+      "suggestions": [
+       "child_joint_pos",
+       "child_axis",
+       "child"
+      ],
+      "severity": "error"
+     },
+     {
+      "line": 7,
+      "kind": "missing_param",
+      "symbol": "sympy.physics.mechanics.PinJoint(parent_point=)",
+      "message": "`sympy.physics.mechanics.PinJoint` has no parameter `parent_point` in sympy 1.11. It exists in versions: 1.13, 1.12.",
+      "exists_in": [
+       "1.13",
+       "1.12"
+      ],
+      "suggestions": [
+       "parent_joint_pos",
+       "parent_axis",
+       "parent"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.13": []
+   }
+  },
+  {
+   "example_id": "183",
+   "library": "sympy",
+   "version": "1.13",
+   "type_of_change": "breaking change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.10": [],
+    "1.11": [],
+    "1.12": []
+   }
+  },
+  {
+   "example_id": "184",
+   "library": "sympy",
+   "version": "1.13",
+   "type_of_change": "breaking change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.10": [],
+    "1.11": [],
+    "1.12": []
+   }
+  },
+  {
+   "example_id": "185",
+   "library": "sympy",
+   "version": "1.13",
+   "type_of_change": "new func/method/class",
+   "own_version_issues": [
+    {
+     "line": 2,
+     "kind": "missing_member",
+     "symbol": "sympy.polys.domains.finitefield.FiniteField",
+     "message": "`sympy.polys.domains.finitefield.FiniteField` was not found in sympy 1.13 (nor in any other known version).",
+     "exists_in": [],
+     "suggestions": [],
+     "severity": "warning"
+    }
+   ],
+   "other_versions": {
+    "1.9": [
+     {
+      "line": 2,
+      "kind": "missing_member",
+      "symbol": "sympy.polys.domains.finitefield.FiniteField",
+      "message": "`sympy.polys.domains.finitefield.FiniteField` was not found in sympy 1.9 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     }
+    ],
+    "1.10": [
+     {
+      "line": 2,
+      "kind": "missing_member",
+      "symbol": "sympy.polys.domains.finitefield.FiniteField",
+      "message": "`sympy.polys.domains.finitefield.FiniteField` was not found in sympy 1.10 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     }
+    ],
+    "1.11": [
+     {
+      "line": 2,
+      "kind": "missing_member",
+      "symbol": "sympy.polys.domains.finitefield.FiniteField",
+      "message": "`sympy.polys.domains.finitefield.FiniteField` was not found in sympy 1.11 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     }
+    ],
+    "1.12": [
+     {
+      "line": 2,
+      "kind": "missing_member",
+      "symbol": "sympy.polys.domains.finitefield.FiniteField",
+      "message": "`sympy.polys.domains.finitefield.FiniteField` was not found in sympy 1.12 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "186",
+   "library": "sympy",
+   "version": "1.13",
+   "type_of_change": "new func/method/class",
+   "own_version_issues": [
+    {
+     "line": 5,
+     "kind": "missing_member",
+     "symbol": "sympy.physics.vector.dyadic.Dyadic",
+     "message": "`sympy.physics.vector.dyadic.Dyadic` was not found in sympy 1.13 (nor in any other known version).",
+     "exists_in": [],
+     "suggestions": [],
+     "severity": "warning"
+    },
+    {
+     "line": 5,
+     "kind": "missing_member",
+     "symbol": "sympy.physics.vector.frame.ReferenceFrame",
+     "message": "`sympy.physics.vector.frame.ReferenceFrame` was not found in sympy 1.13 (nor in any other known version).",
+     "exists_in": [],
+     "suggestions": [],
+     "severity": "warning"
+    }
+   ],
+   "other_versions": {
+    "1.9": [
+     {
+      "line": 5,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.vector.dyadic.Dyadic",
+      "message": "`sympy.physics.vector.dyadic.Dyadic` was not found in sympy 1.9 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     },
+     {
+      "line": 5,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.vector.frame.ReferenceFrame",
+      "message": "`sympy.physics.vector.frame.ReferenceFrame` was not found in sympy 1.9 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     }
+    ],
+    "1.10": [
+     {
+      "line": 5,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.vector.dyadic.Dyadic",
+      "message": "`sympy.physics.vector.dyadic.Dyadic` was not found in sympy 1.10 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     },
+     {
+      "line": 5,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.vector.frame.ReferenceFrame",
+      "message": "`sympy.physics.vector.frame.ReferenceFrame` was not found in sympy 1.10 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     }
+    ],
+    "1.11": [
+     {
+      "line": 5,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.vector.dyadic.Dyadic",
+      "message": "`sympy.physics.vector.dyadic.Dyadic` was not found in sympy 1.11 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     },
+     {
+      "line": 5,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.vector.frame.ReferenceFrame",
+      "message": "`sympy.physics.vector.frame.ReferenceFrame` was not found in sympy 1.11 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     }
+    ],
+    "1.12": [
+     {
+      "line": 5,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.vector.dyadic.Dyadic",
+      "message": "`sympy.physics.vector.dyadic.Dyadic` was not found in sympy 1.12 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     },
+     {
+      "line": 5,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.vector.frame.ReferenceFrame",
+      "message": "`sympy.physics.vector.frame.ReferenceFrame` was not found in sympy 1.12 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "187",
+   "library": "sympy",
+   "version": "1.13",
+   "type_of_change": "new func/method/class",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.10": [],
+    "1.11": [],
+    "1.12": []
+   }
+  },
+  {
+   "example_id": "188",
+   "library": "sympy",
+   "version": "1.13",
+   "type_of_change": "new func/method/class",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.10": [],
+    "1.11": [],
+    "1.12": []
+   }
+  },
+  {
+   "example_id": "189",
+   "library": "sympy",
+   "version": "1.13",
+   "type_of_change": "new func/method/class",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [
+     {
+      "line": 8,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.mechanics.System",
+      "message": "`sympy.physics.mechanics.System` does not exist in sympy 1.9. It exists in versions: 1.13.",
+      "exists_in": [
+       "1.13"
+      ],
+      "suggestions": [
+       "system",
+       "SymbolicSystem"
+      ],
+      "severity": "error"
+     },
+     {
+      "line": 9,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.mechanics.System",
+      "message": "`sympy.physics.mechanics.System` does not exist in sympy 1.9. It exists in versions: 1.13.",
+      "exists_in": [
+       "1.13"
+      ],
+      "suggestions": [
+       "system",
+       "SymbolicSystem"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.10": [
+     {
+      "line": 8,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.mechanics.System",
+      "message": "`sympy.physics.mechanics.System` does not exist in sympy 1.10. It exists in versions: 1.13.",
+      "exists_in": [
+       "1.13"
+      ],
+      "suggestions": [
+       "system",
+       "SymbolicSystem"
+      ],
+      "severity": "error"
+     },
+     {
+      "line": 9,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.mechanics.System",
+      "message": "`sympy.physics.mechanics.System` does not exist in sympy 1.10. It exists in versions: 1.13.",
+      "exists_in": [
+       "1.13"
+      ],
+      "suggestions": [
+       "system",
+       "SymbolicSystem"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.11": [
+     {
+      "line": 8,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.mechanics.System",
+      "message": "`sympy.physics.mechanics.System` does not exist in sympy 1.11. It exists in versions: 1.13.",
+      "exists_in": [
+       "1.13"
+      ],
+      "suggestions": [
+       "system",
+       "SymbolicSystem"
+      ],
+      "severity": "error"
+     },
+     {
+      "line": 9,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.mechanics.System",
+      "message": "`sympy.physics.mechanics.System` does not exist in sympy 1.11. It exists in versions: 1.13.",
+      "exists_in": [
+       "1.13"
+      ],
+      "suggestions": [
+       "system",
+       "SymbolicSystem"
+      ],
+      "severity": "error"
+     }
+    ],
+    "1.12": [
+     {
+      "line": 8,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.mechanics.System",
+      "message": "`sympy.physics.mechanics.System` does not exist in sympy 1.12. It exists in versions: 1.13.",
+      "exists_in": [
+       "1.13"
+      ],
+      "suggestions": [
+       "system",
+       "SymbolicSystem"
+      ],
+      "severity": "error"
+     },
+     {
+      "line": 9,
+      "kind": "missing_member",
+      "symbol": "sympy.physics.mechanics.System",
+      "message": "`sympy.physics.mechanics.System` does not exist in sympy 1.12. It exists in versions: 1.13.",
+      "exists_in": [
+       "1.13"
+      ],
+      "suggestions": [
+       "system",
+       "SymbolicSystem"
+      ],
+      "severity": "error"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "190",
+   "library": "sympy",
+   "version": "1.13",
+   "type_of_change": "new func/method/class",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.10": [],
+    "1.11": [],
+    "1.12": []
+   }
+  },
+  {
+   "example_id": "191",
+   "library": "sympy",
+   "version": "1.9",
+   "type_of_change": "new func/method/class",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.10": [],
+    "1.11": [],
+    "1.12": [],
+    "1.13": []
+   }
+  },
+  {
+   "example_id": "192",
+   "library": "sympy",
+   "version": "1.9",
+   "type_of_change": "new func/method/class",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.10": [],
+    "1.11": [],
+    "1.12": [],
+    "1.13": []
+   }
+  },
+  {
+   "example_id": "193",
+   "library": "sympy",
+   "version": "1.9",
+   "type_of_change": "new func/method/class",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.10": [],
+    "1.11": [],
+    "1.12": [],
+    "1.13": []
+   }
+  },
+  {
+   "example_id": "194",
+   "library": "sympy",
+   "version": "1.9",
+   "type_of_change": "new func/method/class",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.10": [],
+    "1.11": [],
+    "1.12": [],
+    "1.13": []
+   }
+  },
+  {
+   "example_id": "195",
+   "library": "sympy",
+   "version": "1.10",
+   "type_of_change": "breaking change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.11": [],
+    "1.12": [],
+    "1.13": []
+   }
+  },
+  {
+   "example_id": "196",
+   "library": "sympy",
+   "version": "1.10",
+   "type_of_change": "breaking change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.11": [],
+    "1.12": [],
+    "1.13": []
+   }
+  },
+  {
+   "example_id": "197",
+   "library": "sympy",
+   "version": "1.11",
+   "type_of_change": "new func/method/class",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.10": [],
+    "1.12": [],
+    "1.13": []
+   }
+  },
+  {
+   "example_id": "198",
+   "library": "sympy",
+   "version": "1.11",
+   "type_of_change": "new func/method/class",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.10": [],
+    "1.12": [],
+    "1.13": []
+   }
+  },
+  {
+   "example_id": "199",
+   "library": "sympy",
+   "version": "1.11",
+   "type_of_change": "new func/method/class",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.10": [],
+    "1.12": [],
+    "1.13": []
+   }
+  },
+  {
+   "example_id": "200",
+   "library": "sympy",
+   "version": "1.12",
+   "type_of_change": "breaking change",
+   "own_version_issues": [
+    {
+     "line": 5,
+     "kind": "missing_member",
+     "symbol": "sympy.tensor.array.expressions.from_array_to_matrix",
+     "message": "`sympy.tensor.array.expressions.from_array_to_matrix` was not found in sympy 1.12 (nor in any other known version).",
+     "exists_in": [],
+     "suggestions": [],
+     "severity": "warning"
+    }
+   ],
+   "other_versions": {
+    "1.9": [
+     {
+      "line": 5,
+      "kind": "missing_member",
+      "symbol": "sympy.tensor.array.expressions.from_array_to_matrix",
+      "message": "`sympy.tensor.array.expressions.from_array_to_matrix` was not found in sympy 1.9 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     }
+    ],
+    "1.10": [
+     {
+      "line": 5,
+      "kind": "missing_member",
+      "symbol": "sympy.tensor.array.expressions.from_array_to_matrix",
+      "message": "`sympy.tensor.array.expressions.from_array_to_matrix` was not found in sympy 1.10 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     }
+    ],
+    "1.11": [
+     {
+      "line": 5,
+      "kind": "missing_member",
+      "symbol": "sympy.tensor.array.expressions.from_array_to_matrix",
+      "message": "`sympy.tensor.array.expressions.from_array_to_matrix` was not found in sympy 1.11 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     }
+    ],
+    "1.13": [
+     {
+      "line": 5,
+      "kind": "missing_member",
+      "symbol": "sympy.tensor.array.expressions.from_array_to_matrix",
+      "message": "`sympy.tensor.array.expressions.from_array_to_matrix` was not found in sympy 1.13 (nor in any other known version).",
+      "exists_in": [],
+      "suggestions": [],
+      "severity": "warning"
+     }
+    ]
+   }
+  },
+  {
+   "example_id": "201",
+   "library": "sympy",
+   "version": "1.13",
+   "type_of_change": "breaking change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.10": [],
+    "1.11": [],
+    "1.12": []
+   }
+  },
+  {
+   "example_id": "202",
+   "library": "sympy",
+   "version": "1.13",
+   "type_of_change": "breaking change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.10": [],
+    "1.11": [],
+    "1.12": []
+   }
+  },
+  {
+   "example_id": "203",
+   "library": "sympy",
+   "version": "1.13",
+   "type_of_change": "breaking change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.10": [],
+    "1.11": [],
+    "1.12": []
+   }
+  },
+  {
+   "example_id": "204",
+   "library": "sympy",
+   "version": "1.13",
+   "type_of_change": "breaking change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.10": [],
+    "1.11": [],
+    "1.12": []
+   }
+  },
+  {
+   "example_id": "205",
+   "library": "sympy",
+   "version": "1.13",
+   "type_of_change": "breaking change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.10": [],
+    "1.11": [],
+    "1.12": []
+   }
+  },
+  {
+   "example_id": "206",
+   "library": "sympy",
+   "version": "1.13",
+   "type_of_change": "breaking change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.10": [],
+    "1.11": [],
+    "1.12": []
+   }
+  },
+  {
+   "example_id": "207",
+   "library": "sympy",
+   "version": "1.13",
+   "type_of_change": "breaking change",
+   "own_version_issues": [],
+   "other_versions": {
+    "1.9": [],
+    "1.10": [],
+    "1.11": [],
+    "1.12": []
+   }
+  }
+ ]
+}
