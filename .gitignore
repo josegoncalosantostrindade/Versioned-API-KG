@@ -8,3 +8,5 @@ snapshots/
 external/
 kg/*.nt
 kg/*.index.json
+docs_corpus/
+_to_delete/
